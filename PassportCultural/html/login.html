@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Professores</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            background-image: url(../img/login.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-color 0.3s ease, background-image 0.3s ease;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: -2%;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #402E7A;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            height: 35px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #301e5f;
+        }
+
+        .form-group a {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para telas menores */
+        @media (max-width: 768px) {
+            body {
+                background-image: url(../img/loginrespon.png); /* Cor de fundo para telas menores */
+            }
+
+            .form-container {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .form-container h2 {
+                font-size: 20px;
+            }
+
+            .form-group input {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .form-group input[type="submit"] {
+                font-size: 14px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Login</h2>
+    <form action="/submit-login" method="post">
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Entrar">
+        </div>
+        <div class="form-group">
+            <a href="/esqueci-senha">Esqueceu a senha?</a><br>
+            <i><a href="cadastro.html" style="font-size: 13px;">Não tem uma conta? Clique Aqui</a></i>
+        </div>
+    </form>
+</div>
+</body>
+</html>
